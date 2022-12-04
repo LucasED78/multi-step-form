@@ -11,6 +11,7 @@ export const InputContainer = styled.div`
 export const Input = styled.input<Pick<InputProps, 'hasError'>>`
   color: ${({ theme }) => theme.colors.marineBlue};
   font-weight: 600;
+  font-size: ${({ theme }) => theme.fontSize.XS};
 
   border: 1px solid
     ${({ theme, hasError = false }) =>
@@ -21,6 +22,9 @@ export const Input = styled.input<Pick<InputProps, 'hasError'>>`
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.coolGray};
+
+    font-weight: 500;
+    font-size: ${({ theme }) => theme.fontSize.XS};
   }
 `;
 
