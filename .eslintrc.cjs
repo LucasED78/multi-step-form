@@ -23,8 +23,9 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
   },
 };
