@@ -4,6 +4,7 @@ import Typography from '../typography';
 
 const Stepper: React.FC<StepperProps> = ({
   step: selectedStep,
+  onStepClick,
   steps,
   variant = 'vertical',
 }) => {
@@ -13,7 +14,10 @@ const Stepper: React.FC<StepperProps> = ({
         const step = index + 1;
 
         return (
-          <css.StepItemContainer key={step}>
+          <css.StepItemContainer
+            key={step}
+            onClick={() => (onStepClick ? onStepClick(step) : null)}
+          >
             <css.StepContainer selected={selectedStep === step}>
               {step}
             </css.StepContainer>

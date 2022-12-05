@@ -25,7 +25,7 @@ export const StepContainer = styled.div<{ selected?: boolean }>`
   justify-content: center;
   align-items: center;
 
-  border: 1px solid
+  border: 2px solid
     ${({ theme, selected = false }) =>
       selected ? theme.colors.transparent : theme.colors.white};
   border-radius: 50%;
