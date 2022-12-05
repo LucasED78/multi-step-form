@@ -1,17 +1,15 @@
-import { useState } from 'react';
 import Toggle from '../toggle';
+import { ToggleProps } from '../toggle/toggle.types';
 import Typography from '../typography';
 import * as css from './plan-frequency-switcher.styles';
 
-const PlanFrequencySwitcher = () => {
-  const [active, setActive] = useState(false);
-
+const PlanFrequencySwitcher: React.FC<ToggleProps> = ({ active, ...props }) => {
   return (
     <css.Container>
       <Typography size="SM" color={!active ? 'marineBlue' : 'coolGray'}>
         Monthly
       </Typography>
-      <Toggle active={active} onClick={() => setActive(!active)} />
+      <Toggle active={active} {...props} />
       <Typography size="SM" color={active ? 'marineBlue' : 'coolGray'}>
         Yearly
       </Typography>
