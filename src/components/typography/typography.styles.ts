@@ -7,6 +7,7 @@ export const Typography = styled.div<Omit<TypographyProps, 'as'>>`
   font-weight: ${({ fontWeight = '500' }) => fontWeight};
   font-size: ${({ theme, size = 'SM' }) => theme.fontSize[size]};
 
+  text-align: ${({ textAlign }) => textAlign};
   line-height: ${({ theme, lineHeight = 'XS' }) =>
     theme.lineHeight[lineHeight]};
 `;
