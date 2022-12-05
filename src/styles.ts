@@ -8,6 +8,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: Ubuntu;
+    font-weight: 500;
+
     background-color: ${({ theme }: { theme: Theme }) => theme.colors.magnolia};
   }
 `;
