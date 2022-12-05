@@ -19,7 +19,7 @@ const PlanStepForm = () => {
   const isMobile = useMediaQuery({
     query: '(max-width: 768px)',
   });
-  const { data = [] } = usePlans();
+  const { data = [], isLoading } = usePlans();
   const { setFieldValue, values } = useFormikContext<ISubscriptionForm>();
   const { step, setStep } = useStepperContext();
   const { setPlan } = usePlanContext();
@@ -55,6 +55,13 @@ const PlanStepForm = () => {
               selected={plan.id === values.planId}
             />
           ))}
+
+          {isLoading &&
+            Array(3)
+              .fill('')
+              .map((_, index) => (
+                <PlanCard key={index} title="" loading={isLoading} />
+              ))}
         </css.PlansGrid>
 
         <css.FrequencyContainer>

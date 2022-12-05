@@ -3,6 +3,7 @@ export enum ESubscriptionSteps {
   PlanSelector = 2,
   FeaturesPicker = 3,
   Summary = 4,
+  Confirmation = 5,
 }
 
 export enum EPlanFrequency {

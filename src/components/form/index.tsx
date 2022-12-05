@@ -2,6 +2,7 @@ import { Formik } from 'formik';
 import { useStepperContext } from '../../context/stepper-context';
 import { EPlanFrequency, ESubscriptionSteps } from '../../types';
 import AddOnsStepForm from './components/add-ons-step-form';
+import ConfirmationStep from './components/confirmation-step';
 import PersonalInfoStepForm from './components/personal-info-step-form';
 import PlanStepForm from './components/plan-step-form';
 import SummaryStepForm from './components/summary-step';
@@ -25,6 +26,7 @@ const Form = () => {
         {step === ESubscriptionSteps.PlanSelector && <PlanStepForm />}
         {step === ESubscriptionSteps.FeaturesPicker && <AddOnsStepForm />}
         {step === ESubscriptionSteps.Summary && <SummaryStepForm />}
+        {step === ESubscriptionSteps.Confirmation && <ConfirmationStep />}
       </>
     </Formik>
   );

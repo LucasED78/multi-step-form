@@ -67,7 +67,7 @@ const SummaryStepForm = () => {
             Go back
           </Button>
 
-          <Button onClick={() => setStep(ESubscriptionSteps.FeaturesPicker)}>
+          <Button onClick={() => setStep(ESubscriptionSteps.Confirmation)}>
             Confirm
           </Button>
         </FormStyles.ButtonContainer>
