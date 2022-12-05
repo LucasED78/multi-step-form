@@ -4,4 +4,5 @@ export interface PlanCardProps extends CardProps {
   title: string;
   subtitle?: string;
   highlightText?: string;
+  loading?: boolean;
 }
