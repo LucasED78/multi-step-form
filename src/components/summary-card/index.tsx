@@ -6,6 +6,7 @@ import { SummaryProps } from './summary-card.types';
 const Summary: React.FC<SummaryProps> = ({
   title,
   value,
+  onLinkClick,
   additionalFeatures,
 }) => {
   return (
@@ -21,7 +22,7 @@ const Summary: React.FC<SummaryProps> = ({
             {title}
           </Typography>
 
-          <Link href="#" color="coolGray" size="XS">
+          <Link href="#" color="coolGray" size="XS" onClick={onLinkClick}>
             Change
           </Link>
         </span>

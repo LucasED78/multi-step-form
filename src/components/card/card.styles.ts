@@ -4,14 +4,16 @@ import { CardProps } from './card.types';
 export const CardContainer = styled.article<
   Pick<CardProps, 'width' | 'variant' | 'selected'>
 >`
+  cursor: pointer;
+
   width: ${({ width = 'auto' }) => width};
 
   display: inline-flex;
   flex-direction: ${({ variant }) =>
     variant === 'horizontal' ? 'row' : 'column'};
-  gap: ${({ variant }) => (variant === 'horizontal' ? '16px' : '60px')};
+  gap: ${({ variant }) => (variant === 'horizontal' ? '16px' : '40px')};
 
-  padding: 16px;
+  padding: 12px;
 
   border: 1px solid
     ${({ theme, selected = false }) =>

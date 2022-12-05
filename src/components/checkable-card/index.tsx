@@ -13,6 +13,7 @@ const CheckableCard: React.FC<CheckableCardProps> = ({
   return (
     <css.Label>
       <Card
+        width="100%"
         variant="horizontal"
         leading={
           <>

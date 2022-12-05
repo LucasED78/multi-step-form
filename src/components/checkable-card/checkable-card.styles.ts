@@ -26,8 +26,13 @@ export const Label = styled.label`
 
 export const ContentContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
   gap: 100px;
+
+  @media screen and (max-width: 768px) {
+    gap: 0px;
+  }
 `;
 
 export const TrailingContainer = styled.div`
