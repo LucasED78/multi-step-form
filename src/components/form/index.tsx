@@ -1,4 +1,5 @@
 import { Formik } from 'formik';
+import { useMemo } from 'react';
 import { useStepperContext } from '../../context/stepper-context';
 import { EPlanFrequency, ESubscriptionSteps } from '../../types';
 import AddOnsStepForm from './components/add-ons-step-form';
@@ -11,6 +12,21 @@ import schema from './schema';
 const Form = () => {
   const { step } = useStepperContext();
 
+  const Component = useMemo(() => {
+    switch (step) {
+      case ESubscriptionSteps.PersonalInfo:
+        return <PersonalInfoStepForm />;
+      case ESubscriptionSteps.PlanSelector:
+        return <PlanStepForm />;
+      case ESubscriptionSteps.FeaturesPicker:
+        return <AddOnsStepForm />;
+      case ESubscriptionSteps.Summary:
+        return <SummaryStepForm />;
+      case ESubscriptionSteps.Confirmation:
+        return <ConfirmationStep />;
+    }
+  }, [step]);
+
   return (
     <Formik
       initialValues={{
@@ -21,13 +37,7 @@ const Form = () => {
       validationSchema={schema}
       onSubmit={console.log}
     >
-      <>
-        {step === ESubscriptionSteps.PersonalInfo && <PersonalInfoStepForm />}
-        {step === ESubscriptionSteps.PlanSelector && <PlanStepForm />}
-        {step === ESubscriptionSteps.FeaturesPicker && <AddOnsStepForm />}
-        {step === ESubscriptionSteps.Summary && <SummaryStepForm />}
-        {step === ESubscriptionSteps.Confirmation && <ConfirmationStep />}
-      </>
+      {Component}
     </Formik>
   );
 };
