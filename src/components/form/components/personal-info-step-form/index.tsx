@@ -9,17 +9,14 @@ import FormWrapper from '../form-wrapper';
 import * as css from '../../styles';
 
 const PersonalInfoStepForm = () => {
-  const { values, errors, touched, handleChange, handleBlur } =
+  const { values, errors, touched, dirty, handleChange, handleBlur } =
     useFormikContext<ISubscriptionForm>();
   const { setStep } = useStepperContext();
   const keys = ['name', 'emailAddress', 'phoneNumber'];
 
   const isValid = useMemo(() => {
     return !keys.some(
-      key =>
-        (touched[key as keyof ISubscriptionForm] &&
-          !!errors[key as keyof ISubscriptionForm]) ??
-        !touched[key as keyof ISubscriptionForm],
+      key => !!errors[key as keyof ISubscriptionForm] || !dirty,
     );
   }, [touched, errors]);
 
