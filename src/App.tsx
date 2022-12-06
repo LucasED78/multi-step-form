@@ -26,7 +26,13 @@ const App = () => {
         sidebarComponent={
           <StepperSidebar
             step={step}
-            steps={['Your info', 'Select plan', 'Add-ons', 'Summary']}
+            steps={[
+              'Your info',
+              'Select plan',
+              'Add-ons',
+              'Summary',
+              'Confirmation',
+            ]}
             variant={isMobile ? 'horizontal' : 'vertical'}
           />
         }
