@@ -28,8 +28,8 @@ const PlanStepForm = () => {
 
   return (
     <FormWrapper
-      title="Personal info"
-      subtitle="Please provide your name, email address, and phone number"
+      title="Select your plan"
+      subtitle="You have the option of monthly or yearly billing"
     >
       <FormStyles.FormContentContainer>
         <css.PlansGrid>

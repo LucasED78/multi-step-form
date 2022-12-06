@@ -30,5 +30,6 @@ export const StepperWrapper = styled.aside`
     left: 0;
 
     background: url(${backgroundMobile});
+    border-radius: 0;
   }
 `;

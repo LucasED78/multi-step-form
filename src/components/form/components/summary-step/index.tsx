@@ -27,8 +27,8 @@ const SummaryStepForm = () => {
 
   return (
     <FormWrapper
-      title="Personal info"
-      subtitle="Please provide your name, email address, and phone number"
+      title="Finishing up"
+      subtitle="Double-check everything looks OK before confirming"
     >
       <FormStyles.FormContentContainer>
         <Summary

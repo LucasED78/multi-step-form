@@ -33,8 +33,8 @@ const AddOnsStepForm = () => {
 
   return (
     <FormWrapper
-      title="Personal info"
-      subtitle="Please provide your name, email address, and phone number"
+      title="Pick add-ons"
+      subtitle="Add-ons helps enhance your gaming experience"
     >
       <css.ContentContainer>
         {featuresKeys.map(key => (
