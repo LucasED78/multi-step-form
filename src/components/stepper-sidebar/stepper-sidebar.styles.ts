@@ -7,7 +7,6 @@ export const StepperWrapper = styled.aside`
 
   width: 274px;
   height: 100%;
-  min-height: 80vh;
 
   padding: 30px;
 

@@ -15,8 +15,8 @@ export const Container = styled.main`
 `;
 
 export const Wrapper = styled.div`
-  width: 65vw;
-  min-height: 80vh;
+  width: 890px;
+  height: 540px;
 
   display: flex;
 
